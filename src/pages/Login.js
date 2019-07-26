@@ -102,7 +102,7 @@ const Login = (props) => {
             variant="contained"
             className={classes.submit}
           >
-            <Link to='/dashboard'>
+            <Link to={`${process.env.PUBLIC_URL}/dashboard`}>
             Sign In
             </Link>
           </Button>
