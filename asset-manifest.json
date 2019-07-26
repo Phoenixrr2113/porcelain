@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/porcelain/static/css/main.38d0b56d.chunk.css",
+    "main.js": "/porcelain/static/js/main.1e832b08.chunk.js",
+    "main.js.map": "/porcelain/static/js/main.1e832b08.chunk.js.map",
+    "runtime~main.js": "/porcelain/static/js/runtime~main.d44381ee.js",
+    "runtime~main.js.map": "/porcelain/static/js/runtime~main.d44381ee.js.map",
+    "static/css/2.d14e8350.chunk.css": "/porcelain/static/css/2.d14e8350.chunk.css",
+    "static/js/2.8fbe4b64.chunk.js": "/porcelain/static/js/2.8fbe4b64.chunk.js",
+    "static/js/2.8fbe4b64.chunk.js.map": "/porcelain/static/js/2.8fbe4b64.chunk.js.map",
+    "index.html": "/porcelain/index.html",
+    "precache-manifest.af74532ae69db295ff94e98188312046.js": "/porcelain/precache-manifest.af74532ae69db295ff94e98188312046.js",
+    "service-worker.js": "/porcelain/service-worker.js",
+    "static/css/2.d14e8350.chunk.css.map": "/porcelain/static/css/2.d14e8350.chunk.css.map",
+    "static/css/main.38d0b56d.chunk.css.map": "/porcelain/static/css/main.38d0b56d.chunk.css.map",
+    "static/media/index.scss": "/porcelain/static/media/lg.ecff1170.eot"
+  }
+}
