@@ -96,16 +96,16 @@ const Login = (props) => {
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
           />
+            <Link to={`${process.env.PUBLIC_URL}/dashboard`}>
           <Button
             type="submit"
             fullWidth
             variant="contained"
             className={classes.submit}
           >
-            <Link to={`${process.env.PUBLIC_URL}/dashboard`}>
             Sign In
-            </Link>
           </Button>
+            </Link>
           <Grid container>
             <Grid item xs>
               <Link href="#" variant="body2">
