@@ -151,7 +151,7 @@ const Dashboard = (props) => {
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             Dashboard
           </Typography>
-          <Button onClick={() => props.history.push('/new-order')} className={classes.order}>Place a New Order</Button>
+          <Button onClick={() => props.history.push(`${process.env.PUBLIC_URL}/new-order`)} className={classes.order}>Place a New Order</Button>
           
         </Toolbar>
       </AppBar>
