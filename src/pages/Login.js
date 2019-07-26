@@ -7,7 +7,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
@@ -96,16 +96,17 @@ const Login = (props) => {
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
           />
-            <Link to={`${process.env.PUBLIC_URL}/dashboard`}>
+  
           <Button
             type="submit"
             fullWidth
             variant="contained"
             className={classes.submit}
+            onClick={() => props.history.push(`${process.env.PUBLIC_URL}/dashboard`)}
           >
             Sign In
           </Button>
-            </Link>
+          
           <Grid container>
             <Grid item xs>
               <Link href="#" variant="body2">
@@ -126,7 +127,7 @@ const Login = (props) => {
   );
 }
 
-export default Login;
+export default withRouter(Login);
 
 // SIGN UP CONDITIONAL
 {/* <Container component="main" maxWidth="xs">
