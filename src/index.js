@@ -5,8 +5,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Home from './pages/HomeOne';
 import Account from './pages/Account';
-import Cart from './pages/Cart';
 import Dashboard from './pages/Dashboard';
+import Checkout from './pages/Checkout';
 import Login from './pages/Login';
 import Product from './pages/Product';
 import ProductList from './pages/ProductList';
@@ -40,15 +40,16 @@ class Root extends Component {
 						path={`${process.env.PUBLIC_URL}/account`}
 						component={Account}
 					/>
-					<Route
-						exact
-						path={`${process.env.PUBLIC_URL}/cart`}
-						component={Cart}
-					/>
+					
 					<Route
 						exact
 						path={`${process.env.PUBLIC_URL}/dashboard`}
 						component={Dashboard}
+					/>
+					<Route
+						exact
+						path={`${process.env.PUBLIC_URL}/checkout`}
+						component={Checkout}
 					/>
 					<Route
 						exact
