@@ -11,10 +11,8 @@ const ProductList = () => {
   return (
     <div>
       <NavBar />
-      <ProductHeroSlider />
-      <FeatureIcon />
-      <BestSellers />
       <SizeChartSlider />
+      <FeatureIcon />
       <Footer />
     </div>
   )
