@@ -73,18 +73,15 @@ class Footer extends Component {
 														<a href={`${process.env.PUBLIC_URL}/`}>Home</a>
 													</li>
 													<li>
-														<a href={`${process.env.PUBLIC_URL}/`}>
-															Company News
+														<a href={`${process.env.PUBLIC_URL}/about`}>
+															About Us
 														</a>
 													</li>
 													<li>
-														<a href={`${process.env.PUBLIC_URL}/`}>Projects</a>
+														<a href={`${process.env.PUBLIC_URL}/product-list`}>Products</a>
 													</li>
 													<li>
-														<a href={`${process.env.PUBLIC_URL}/`}>Careers</a>
-													</li>
-													<li>
-														<a href={`${process.env.PUBLIC_URL}/`}>
+														<a href={`${process.env.PUBLIC_URL}/contact`}>
 															Contact Us
 														</a>
 													</li>

@@ -35,7 +35,7 @@ class HeroSliderOne extends Component {
 				sliderTitle: 'Build Your Dream Porcelain Portrait',
 				sliderSubtitle:
 					'Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm tempor incididunt ut labore et dolore.',
-				btnLink: 'contact-us',
+				btnLink: 'product-list',
 			},
 			{
 				bgImg:
@@ -43,7 +43,7 @@ class HeroSliderOne extends Component {
 				sliderTitle: 'High-Quality porcelain',
 				sliderSubtitle:
 					'Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm tempor incididunt ut labore et dolore.',
-				btnLink: 'contact-us',
+				btnLink: 'product-list',
 			},
 			{
 				bgImg:
@@ -51,7 +51,7 @@ class HeroSliderOne extends Component {
 				sliderTitle: 'Brilliant Color & Finish',
 				sliderSubtitle:
 					'Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm tempor incididunt ut labore et dolore.',
-				btnLink: 'contact-us',
+				btnLink: 'product-list',
 			},
 		];
 
@@ -71,7 +71,6 @@ class HeroSliderOne extends Component {
 											<a
 												className='hero-slider__btn'
 												href={`${process.env.PUBLIC_URL}/${val.btnLink}`}>
-												{' '}
 												GET START
 											</a>
 										</div>

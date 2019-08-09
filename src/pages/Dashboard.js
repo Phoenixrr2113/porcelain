@@ -20,10 +20,13 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import {mainListItems} from '../components/ListItems';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
 // import Chart from './Chart';
 // import Deposits from './Deposits';
 import OrderHistory from '../components/OrderHistory';
 import LastOrderedItems from '../components/LastOrderedItems'
+import Product from './Product'
 
 function MadeWithLove() {
   return (
@@ -126,12 +129,17 @@ const useStyles = makeStyles(theme => ({
 const Dashboard = (props) => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
+  const [value, setValue] = React.useState(1);
   const handleDrawerOpen = () => {
     setOpen(true);
   };
   const handleDrawerClose = () => {
     setOpen(false);
   };
+  function handleChange(event, newValue) {
+		setValue(newValue);
+  }
+  
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
@@ -151,7 +159,10 @@ const Dashboard = (props) => {
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             Dashboard
           </Typography>
-          <Button onClick={() => props.history.push(`${process.env.PUBLIC_URL}/new-order`)} className={classes.order}>Place a New Order</Button>
+          <Tabs value={value} onChange={handleChange}>
+            <Tab label='Place a New Order'/>
+          {/* <Button onClick={() => props.history.push(`${process.env.PUBLIC_URL}/new-order`)} className={classes.order}>Place a New Order</Button> */}
+          </Tabs>
           
         </Toolbar>
       </AppBar>
@@ -172,17 +183,19 @@ const Dashboard = (props) => {
         {/* <Divider />
         <List>{secondaryListItems}</List> */}
       </Drawer>
+
+
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
+          {value === 1 &&
           <Grid container spacing={2}>
-            {/* Chart */}
+
+          {/* TODO: Conditionally render new order page here */}
+
             <Grid item xs={12} md={12} lg={12}>
-              
-                <LastOrderedItems />
-              
+              <LastOrderedItems />
             </Grid>
-            
             
             {/* Recent Orders */}
             <Grid item xs={12}>
@@ -191,8 +204,9 @@ const Dashboard = (props) => {
               </Paper>
             </Grid>
           </Grid>
+          }
+          {value === 0 && <Product />}
         </Container>
-        <MadeWithLove />
       </main>
     </div>
   );

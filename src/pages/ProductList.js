@@ -11,7 +11,9 @@ const ProductList = () => {
   return (
     <div>
       <NavBar />
-      <SizeChartSlider />
+
+      {/* TODO: Create a product list view */}
+      
       <FeatureIcon />
       <Footer />
     </div>

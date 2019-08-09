@@ -14,17 +14,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
-function MadeWithLove() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Built with love by the '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Material-UI
-      </Link>
-      {' team.'}
-    </Typography>
-  );
-}
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -129,7 +119,8 @@ const Login = (props) => {
 
 export default withRouter(Login);
 
-// SIGN UP CONDITIONAL
+// TODO: conditional render sign up component
+
 {/* <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>

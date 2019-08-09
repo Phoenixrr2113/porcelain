@@ -39,7 +39,7 @@ class ServiceGridSlider extends Component {
 				serviceTitle: 'Engraving',
 				serviceExcerpt:
 					'Lorem ipsum dolor sit amet consect adipisi elit sed do eiusm tempor',
-				serviceUrl: 'service-details-left-sidebar',
+				serviceUrl: 'about',
 			},
 			{
 				img:
@@ -48,7 +48,7 @@ class ServiceGridSlider extends Component {
 				serviceTitle: 'Photo Editing',
 				serviceExcerpt:
 					'Lorem ipsum dolor sit amet consect adipisi elit sed do eiusm tempor',
-				serviceUrl: 'service-details-left-sidebar',
+				serviceUrl: 'about',
 			},
 			{
 				img:
@@ -57,7 +57,7 @@ class ServiceGridSlider extends Component {
 				serviceTitle: 'Stone Carving',
 				serviceExcerpt:
 					'Lorem ipsum dolor sit amet consect adipisi elit sed do eiusm tempor',
-				serviceUrl: 'service-details-left-sidebar',
+				serviceUrl: 'about',
 			},
 			{
 				img:
@@ -66,7 +66,7 @@ class ServiceGridSlider extends Component {
 				serviceTitle: 'Something Cooler',
 				serviceExcerpt:
 					'Lorem ipsum dolor sit amet consect adipisi elit sed do eiusm tempor',
-				serviceUrl: 'service-details-left-sidebar',
+				serviceUrl: 'about',
 			},
 		];
 
@@ -85,9 +85,9 @@ class ServiceGridSlider extends Component {
 									/> */}
 								</a>
 							</div>
-							<div className='icon'>
+							{/* <div className='icon'>
 								<i className={val.iconName} />
-							</div>
+							</div> */}
 						</div>
 						<div className='service-grid-item__content'>
 							<h3 className='title'>
