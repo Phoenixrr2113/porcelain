@@ -23,41 +23,33 @@ export const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
     </ListItem>
+
     <ListItem button>
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>
-      <ListItemText primary="Account Info" />
+      <ListItemText primary="My Account" />
     </ListItem>
+
     <ListItem button>
       <ListItemIcon>
         <ShoppingCartIcon />
       </ListItemIcon>
-      <ListItemText primary="Orders" />
+      <ListItemText primary="History" />
     </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <LayersIcon />
-      </ListItemIcon>
-      <ListItemText primary="Logout" />
-    </ListItem>
-    <ListItem button onClick={() => <Redirect to='/' />}>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Store" />
-    </ListItem>
+
     <ListItem button>
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
       <ListItemText primary="Size Chart" />
     </ListItem>
+
     <ListItem button>
       <ListItemIcon>
-        <AssignmentIcon />
+        <LayersIcon />
       </ListItemIcon>
-      <ListItemText primary="Catalog" />
+      <ListItemText primary="Logout" />
     </ListItem>
   </div>
 );

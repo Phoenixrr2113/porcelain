@@ -12,6 +12,24 @@ import Typography from '@material-ui/core/Typography';
 import {NavLink} from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import Modal from '@material-ui/core/Modal';
+import OrderBuilder from  '../components/OrderBuilder'
+
+function rand() {
+  return Math.round(Math.random() * 20) - 10;
+}
+
+function getModalStyle() {
+  const top = 50 + rand();
+  const left = 50 + rand();
+
+  return {
+    top: `${top}%`,
+    left: `${left}%`,
+    transform: `translate(-${top}%, -${left}%)`,
+  };
+}
+
 
 
 const useStyles = makeStyles(theme => ({
@@ -27,17 +45,11 @@ const useStyles = makeStyles(theme => ({
       listStyle: 'none',
     },
   },
-  appBar: {
-    borderBottom: `1px solid ${theme.palette.divider}`,
-  },
   toolbar: {
     flexWrap: 'wrap',
   },
   toolbarTitle: {
     flexGrow: 1,
-  },
-  link: {
-    margin: theme.spacing(1, 1.5),
   },
   heroContent: {
     padding: theme.spacing(8, 0, 6),
@@ -50,6 +62,14 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     alignItems: 'baseline',
     marginBottom: theme.spacing(2),
+  },
+  paper: {
+    position: 'absolute',
+    width: 400,
+    backgroundColor: theme.palette.background.paper,
+    border: '2px solid #000',
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 4),
   },
 }));
 
@@ -85,6 +105,16 @@ const tiers = [
 
 export default function Product() {
   const classes = useStyles();
+  const [modalStyle] = React.useState(getModalStyle);
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <React.Fragment>
@@ -131,19 +161,20 @@ export default function Product() {
                   </ul>
                 </CardContent>
                 <CardActions>
-                  <Button fullWidth variant={tier.buttonVariant} color="primary">
+                  <Button onClick={handleOpen} fullWidth variant={tier.buttonVariant} color="primary">
                     {tier.buttonText}
                   </Button>
+                  <OrderBuilder open={open} modalStyle={modalStyle} handleClose={handleClose} />
                 </CardActions>
               </Card>
             </Grid>
           ))}
         </Grid>
-        <Button fullWidth  color="primary">
-          <NavLink to={`${process.env.PUBLIC_URL}/checkout`}>
+          <NavLink style={{width: '100%'}} to={`${process.env.PUBLIC_URL}/checkout`}>
+        <Button color="primary">
             Checkout
-          </NavLink>
         </Button>
+          </NavLink>
       </Container>
       {/* Footer */}
 

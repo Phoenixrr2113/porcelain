@@ -14,22 +14,8 @@ import AddressForm from '../components/AddressForm';
 import PaymentForm from '../components/PaymentForm';
 import Review from '../components/Review';
 
-function MadeWithLove() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Built with love by the '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Material-UI
-      </Link>
-      {' team.'}
-    </Typography>
-  );
-}
 
 const useStyles = makeStyles(theme => ({
-  appBar: {
-    position: 'relative',
-  },
   layout: {
     width: 'auto',
     marginLeft: theme.spacing(2),
@@ -56,10 +42,29 @@ const useStyles = makeStyles(theme => ({
   buttons: {
     display: 'flex',
     justifyContent: 'flex-end',
+    
+  },
+  '@global': {
+  '.MuiStepIcon-root.MuiStepIcon-active': {
+        color: '#3B7934'
+  },
+  '.MuiStepIcon-root.MuiStepIcon-completed': {
+        color: '#3B7934'
+  },
+  '.MuiStepIcon-root': {
+        color: '#3B7934'
+  },
+  '.MuiStepIcon-active': {
+        color: '#3B7934'
+  },
+  '.MuiButton-containedPrimary': {
+        BackgroundColor: '#3B7934'
+  }
+  
   },
   button: {
     marginTop: theme.spacing(3),
-    marginLeft: theme.spacing(1),
+    marginLeft: theme.spacing(1)
   },
 }));
 
@@ -93,21 +98,14 @@ export default function Checkout() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar position="absolute" color="default" className={classes.appBar}>
-        <Toolbar>
-          <Typography variant="h6" color="inherit" noWrap>
-            Company name
-          </Typography>
-        </Toolbar>
-      </AppBar>
       <main className={classes.layout}>
         <Paper className={classes.paper}>
           <Typography component="h1" variant="h4" align="center">
             Checkout
           </Typography>
-          <Stepper activeStep={activeStep} className={classes.stepper}>
+          <Stepper  activeStep={activeStep} className={classes.stepper} classes={{ root: classes.MuiSvgIcon }}>
             {steps.map(label => (
-              <Step key={label}>
+              <Step  key={label}>
                 <StepLabel>{label}</StepLabel>
               </Step>
             ))}
@@ -137,6 +135,7 @@ export default function Checkout() {
                     color="primary"
                     onClick={handleNext}
                     className={classes.button}
+                    style={{background: '#3B7934'}}
                   >
                     {activeStep === steps.length - 1 ? 'Place order' : 'Next'}
                   </Button>
@@ -145,7 +144,6 @@ export default function Checkout() {
             )}
           </React.Fragment>
         </Paper>
-        <MadeWithLove />
       </main>
     </React.Fragment>
   );

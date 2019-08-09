@@ -28,17 +28,6 @@ import OrderHistory from '../components/OrderHistory';
 import LastOrderedItems from '../components/LastOrderedItems'
 import Product from './Product'
 
-function MadeWithLove() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Built with love by the '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Material-UI
-      </Link>
-      {' team.'}
-    </Typography>
-  );
-}
 
 const drawerWidth = 240;
 
