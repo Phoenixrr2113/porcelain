@@ -60,9 +60,7 @@ class BrandLogoSlider extends Component {
 			return (
 				<div className='swiper-slide brand-logo-slider__single' key={i}>
 					<div className='image text-center'>
-						<a href={val.logoLink}>
 							<img src={`${val.img}`} className='img-fluid' alt='' />
-						</a>
 					</div>
 				</div>
 			);

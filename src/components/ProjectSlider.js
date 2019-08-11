@@ -32,7 +32,7 @@ class ProjectSlider extends Component {
 				sliderTitle: 'One Cool Product',
 				sliderShortDesc:
 					'Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim',
-				sliderLink: 'project-details',
+				sliderLink: 'product-list',
 			},
 			{
 				img:
@@ -40,7 +40,7 @@ class ProjectSlider extends Component {
 				sliderTitle: 'Another Cool Product',
 				sliderShortDesc:
 					'Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim',
-				sliderLink: 'project-details',
+				sliderLink: 'product-list',
 			},
 			{
 				img:
@@ -48,7 +48,7 @@ class ProjectSlider extends Component {
 				sliderTitle: 'Last cool Product',
 				sliderShortDesc:
 					'Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim',
-				sliderLink: 'project-details',
+				sliderLink: 'product-list',
 			},
 		];
 
