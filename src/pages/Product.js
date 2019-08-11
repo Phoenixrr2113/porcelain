@@ -20,8 +20,8 @@ function rand() {
 }
 
 function getModalStyle() {
-  const top = 50 + rand();
-  const left = 50 + rand();
+  const top = 50;
+  const left = 50;
 
   return {
     top: `${top}%`,
@@ -71,6 +71,9 @@ const useStyles = makeStyles(theme => ({
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 4),
   },
+  '.MuiButton-containedPrimary': {
+        background: '#3B7934'
+  }
 }));
 
 const tiers = [
@@ -161,7 +164,7 @@ export default function Product() {
                   </ul>
                 </CardContent>
                 <CardActions>
-                  <Button onClick={handleOpen} fullWidth variant={tier.buttonVariant} color="primary">
+                  <Button onClick={handleOpen} fullWidth variant={tier.buttonVariant} style={tier.buttonVariant ==='contained' ? {background: '#3B7934'} : {background: '#FAFAFA', color: '#3B7934', border: '1px solid #3B7934'}} color="primary">
                     {tier.buttonText}
                   </Button>
                   <OrderBuilder open={open} modalStyle={modalStyle} handleClose={handleClose} />
@@ -170,11 +173,6 @@ export default function Product() {
             </Grid>
           ))}
         </Grid>
-          <NavLink style={{width: '100%'}} to={`${process.env.PUBLIC_URL}/checkout`}>
-        <Button color="primary">
-            Checkout
-        </Button>
-          </NavLink>
       </Container>
       {/* Footer */}
 
